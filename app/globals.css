@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+  --color-on-surface-variant: #434653;
+  --color-surface-bright: #f7f9fb;
+  --color-on-primary: #ffffff;
+  --color-background: #f7f9fb;
+  --color-primary: #003c90;
+  --color-surface-variant: #e0e3e5;
+  --color-on-error: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-highest: #e0e3e5;
+  --color-primary-fixed: #d9e2ff;
+  --color-tertiary: #004943;
+  --color-surface-container: #eceef0;
+  --color-surface-container-high: #e6e8ea;
+  --color-primary-container: #0f52ba;
+  --color-error-container: #ffdad6;
+  --color-surface-container-low: #f2f4f6;
+  --color-outline: #737784;
+  --color-error: #ba1a1a;
+  --color-on-background: #191c1e;
+  --color-surface: #f7f9fb;
+  --color-secondary: #505f76;
+  --color-outline-variant: #c3c6d5;
+  --color-on-surface: #191c1e;
+}
+
+@layer base {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  .bg-medical-pattern {
+    background-color: #f7f9fb;
+    background-image: radial-gradient(#d9e2ff 2px, transparent 2px), radial-gradient(#d9e2ff 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-background);
+}
